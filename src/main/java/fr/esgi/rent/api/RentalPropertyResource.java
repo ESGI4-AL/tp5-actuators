@@ -1,14 +1,16 @@
 package fr.esgi.rent.api;
 
-import fr.esgi.rent.domain.RentalPropertyEntity;
 import fr.esgi.rent.dto.response.RentalPropertyResponseDto;
 import fr.esgi.rent.mapper.RentalPropertyMapper;
 import fr.esgi.rent.repository.RentalPropertyRepository;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api")
@@ -27,5 +29,17 @@ public class RentalPropertyResource {
     public List<RentalPropertyResponseDto> getRentalProperties() {
         var rentalProperties = rentalPropertyRepository.findAll();
         return rentalPropertyMapper.mapToDtoList(rentalProperties);
+    }
+
+    @GetMapping("/rental-properties/{id}")
+    public ResponseEntity<RentalPropertyResponseDto> getRentalProperty(@PathVariable UUID id) {
+        var rentalProperty = rentalPropertyRepository.findById(id);
+
+        if (rentalProperty.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        var dto = rentalPropertyMapper.mapToDto(rentalProperty.get());
+        return ResponseEntity.ok(dto);
     }
 }
