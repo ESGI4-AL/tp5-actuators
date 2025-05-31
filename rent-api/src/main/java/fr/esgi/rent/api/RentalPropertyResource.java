@@ -1,9 +1,11 @@
 package fr.esgi.rent.api;
 
+import fr.esgi.rent.dto.request.RentalPropertyFilterDto;
 import fr.esgi.rent.dto.request.RentalPropertyRequestDto;
 import fr.esgi.rent.dto.response.RentalPropertyResponseDto;
 import fr.esgi.rent.mapper.RentalPropertyMapper;
 import fr.esgi.rent.repository.RentalPropertyRepository;
+import fr.esgi.rent.service.RentalPropertyService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,16 +20,24 @@ public class RentalPropertyResource {
 
     private final RentalPropertyRepository rentalPropertyRepository;
     private final RentalPropertyMapper rentalPropertyMapper;
+    private final RentalPropertyService rentalPropertyService;
 
     public RentalPropertyResource(RentalPropertyRepository rentalPropertyRepository,
-                                  RentalPropertyMapper rentalPropertyMapper) {
+                                  RentalPropertyMapper rentalPropertyMapper,
+                                  RentalPropertyService rentalPropertyService) {
         this.rentalPropertyRepository = rentalPropertyRepository;
         this.rentalPropertyMapper = rentalPropertyMapper;
+        this.rentalPropertyService = rentalPropertyService;
     }
 
     @GetMapping("/rental-properties")
-    public List<RentalPropertyResponseDto> getRentalProperties() {
-        var rentalProperties = rentalPropertyRepository.findAll();
+    public List<RentalPropertyResponseDto> getRentalProperties(
+            @RequestBody(required = false) RentalPropertyFilterDto filter) {
+
+        System.out.println("🔍 Requête reçue avec filtre: " + filter);
+
+        var rentalProperties = rentalPropertyService.findRentalProperties(filter);
+
         return rentalPropertyMapper.mapToDtoList(rentalProperties);
     }
 

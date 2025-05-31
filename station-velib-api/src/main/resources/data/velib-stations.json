@@ -1,0 +1,164 @@
+{
+  "stations": [
+    {
+      "stationcode": "41303",
+      "name": "Gare de Nogent-le-Perreux",
+      "is_installed": "OUI",
+      "capacity": 50,
+      "numdocksavailable": 0,
+      "numbikesavailable": 31,
+      "mechanical": 8,
+      "ebike": 23,
+      "is_renting": "OUI",
+      "is_returning": "OUI",
+      "duedate": "2025-04-23T12:58:03+00:00",
+      "coordonnees_geo": {
+        "lon": 2.493693307042122,
+        "lat": 48.83842553348809
+      },
+      "nom_commune": "Nogent-sur-Marne",
+      "code_insee_commune": "94052",
+      "station_opening_hours": null
+    },
+    {
+      "stationcode": "41302",
+      "name": "Charles de Gaulle - Beauté",
+      "is_installed": "OUI",
+      "capacity": 49,
+      "numdocksavailable": 34,
+      "numbikesavailable": 15,
+      "mechanical": 4,
+      "ebike": 11,
+      "is_renting": "OUI",
+      "is_returning": "OUI",
+      "duedate": "2025-04-23T12:59:20+00:00",
+      "coordonnees_geo": {
+        "lon": 2.479562651149885,
+        "lat": 48.83649602312711
+      },
+      "nom_commune": "Nogent-sur-Marne",
+      "code_insee_commune": "94052",
+      "station_opening_hours": null
+    },
+    {
+      "stationcode": "41301",
+      "name": "Bois de Vincennes - Gare",
+      "is_installed": "OUI",
+      "capacity": 49,
+      "numdocksavailable": 14,
+      "numbikesavailable": 35,
+      "mechanical": 27,
+      "ebike": 8,
+      "is_renting": "OUI",
+      "is_returning": "OUI",
+      "duedate": "2025-04-23T12:58:45+00:00",
+      "coordonnees_geo": {
+        "lon": 2.470833995083,
+        "lat": 48.836022242887
+      },
+      "nom_commune": "Vincennes",
+      "code_insee_commune": "94300",
+      "station_opening_hours": null
+    },
+    {
+      "stationcode": "41304",
+      "name": "Station Louvre",
+      "is_installed": "OUI",
+      "capacity": 30,
+      "numdocksavailable": 10,
+      "numbikesavailable": 20,
+      "mechanical": 15,
+      "ebike": 5,
+      "is_renting": "OUI",
+      "is_returning": "OUI",
+      "duedate": "2025-04-23T13:00:00+00:00",
+      "coordonnees_geo": {
+        "lon": 2.3522,
+        "lat": 48.8566
+      },
+      "nom_commune": "Paris",
+      "code_insee_commune": "75001",
+      "station_opening_hours": null
+    },
+    {
+      "stationcode": "41305",
+      "name": "Station Châtelet",
+      "is_installed": "OUI",
+      "capacity": 35,
+      "numdocksavailable": 12,
+      "numbikesavailable": 23,
+      "mechanical": 18,
+      "ebike": 5,
+      "is_renting": "OUI",
+      "is_returning": "OUI",
+      "duedate": "2025-04-23T13:05:00+00:00",
+      "coordonnees_geo": {
+        "lon": 2.3471,
+        "lat": 48.8584
+      },
+      "nom_commune": "Paris",
+      "code_insee_commune": "75001",
+      "station_opening_hours": null
+    },
+    {
+      "stationcode": "41306",
+      "name": "Station République",
+      "is_installed": "OUI",
+      "capacity": 40,
+      "numdocksavailable": 15,
+      "numbikesavailable": 25,
+      "mechanical": 20,
+      "ebike": 5,
+      "is_renting": "OUI",
+      "is_returning": "OUI",
+      "duedate": "2025-04-23T13:10:00+00:00",
+      "coordonnees_geo": {
+        "lon": 2.3633,
+        "lat": 48.8676
+      },
+      "nom_commune": "Paris",
+      "code_insee_commune": "75003",
+      "station_opening_hours": null
+    },
+    {
+      "stationcode": "41307",
+      "name": "Station Bastille",
+      "is_installed": "OUI",
+      "capacity": 45,
+      "numdocksavailable": 20,
+      "numbikesavailable": 25,
+      "mechanical": 15,
+      "ebike": 10,
+      "is_renting": "OUI",
+      "is_returning": "OUI",
+      "duedate": "2025-04-23T13:15:00+00:00",
+      "coordonnees_geo": {
+        "lon": 2.3696,
+        "lat": 48.8532
+      },
+      "nom_commune": "Paris",
+      "code_insee_commune": "75011",
+      "station_opening_hours": null
+    },
+    {
+      "stationcode": "41308",
+      "name": "Station Créteil Préfecture",
+      "is_installed": "OUI",
+      "capacity": 25,
+      "numdocksavailable": 5,
+      "numbikesavailable": 20,
+      "mechanical": 12,
+      "ebike": 8,
+      "is_renting": "OUI",
+      "is_returning": "OUI",
+      "duedate": "2025-04-23T13:20:00+00:00",
+      "coordonnees_geo": {
+        "lon": 2.4597,
+        "lat": 48.7761
+      },
+      "nom_commune": "Créteil",
+      "code_insee_commune": "94028",
+      "station_opening_hours": null
+    }
+  ]
+}
