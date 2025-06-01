@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "11944c1e-d0fe-488e-bd72-5d6f56e11b0e",
+		"name": "TP4-Spring-4AL1-Dudas",
+		"description": "This collection tests the endpoints for the rent api application and the velib station application.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28194931"
+	},
+	"item": [
+		{
+			"name": "rent-api",
+			"item": [
+				{
+					"name": "Create rental property",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"description\": \"Aappartement moderne avec vue sur parc\",\r\n  \"town\": \"Marseille\",\r\n  \"address\": \"123 Canebière\",\r\n  \"propertyType\": \"Appartement\",\r\n  \"rentAmount\": 1500.0,\r\n  \"securityDepositAmount\": 3000.0,\r\n  \"area\": 75.5,\r\n  \"bedroomsCount\": 3,\r\n  \"floorNumber\": 5,\r\n  \"numberOfFloors\": 8,\r\n  \"constructionYear\": 2020,\r\n  \"energyClassification\": \"A\",\r\n  \"hasElevator\": true,\r\n  \"hasIntercom\": true,\r\n  \"hasBalcony\": true,\r\n  \"hasParkingSpace\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/rental-properties",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"rental-properties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all rental properties",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nearVelibStations\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/rental-properties",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"rental-properties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get id rental property",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nearVelibStations\": true\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/rental-properties/2980ba17-12db-493f-ae63-6930ad9a3c85",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"rental-properties",
+								"2980ba17-12db-493f-ae63-6930ad9a3c85"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "station-velib-api",
+			"item": [
+				{
+					"name": "Health",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8081/stations/health",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"stations",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stations stats",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8081/stations/stats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"stations",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stations communes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8081/stations/communes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"stations",
+								"communes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stations town",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8081/stations/velibs/Paris",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"stations",
+								"velibs",
+								"Paris"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stations available",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8081/stations/velibs/available",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"stations",
+								"velibs",
+								"available"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Velib stations debug",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"towns\": [\"Paris\", \"Vincennes\", \"Nogent-sur-Marne\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/stations/velibs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"stations",
+								"velibs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
