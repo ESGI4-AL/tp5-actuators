@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class DataService {
@@ -40,7 +41,6 @@ public class DataService {
                     .count();
 
         } catch (IOException e) {
-            System.err.println("❌ Erreur lors du chargement des données: " + e.getMessage());
             loadDefaultData();
         }
     }
@@ -52,6 +52,7 @@ public class DataService {
     public List<String> getAvailableCommunes() {
         return stations.stream()
                 .map(VelibStationEntity::getNomCommune)
+                .filter(Objects::nonNull)
                 .distinct()
                 .sorted()
                 .toList();
